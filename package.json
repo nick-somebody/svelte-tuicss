@@ -1,11 +1,33 @@
 {
   "name": "svelte-tuicss",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "licence": "MIT",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/svelte-tuicss.umd.js",
+  "module": "./dist/svelte-tuicss.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/svelte-tuicss.es.js",
+      "require": "./dist/svelte-tuicss.umd.js"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && tsc -p ./tsconfig.build.json",
+    "build:docs": "vite build --config vite.docs.config.ts",
+    "bump:patch": "git fetch origin --tags && npm version patch",
+    "bump:minor": "git fetch origin --tags && npm version minor",
+    "bump:major": "git fetch origin --tags && npm version major",
+    "release": "git push origin refs/tags/$(git describe --tags --abbrev=0)",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "test": "vitest run",
@@ -15,6 +37,7 @@
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
     "@testing-library/svelte": "^4.1.0",
     "@tsconfig/svelte": "^5.0.2",
+    "@types/node": "^20.11.16",
     "date-fns": "~3.3.0",
     "jsdom": "^24.0.0",
     "svelte": "^4.2.8",
