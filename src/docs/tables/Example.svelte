@@ -1,12 +1,12 @@
 <script>
 
-    import TuiTBody from "../../lib/components/table/TuiTBody.svelte";
-    import TuiTHead from "../../lib/components/table/TuiTHead.svelte";
-    import TuiTable from "../../lib/components/table/TuiTable.svelte";
-    import TuiTd from "../../lib/components/table/TuiTd.svelte";
-    import TuiTh from "../../lib/components/table/TuiTh.svelte";
-    import TuiTr from "../../lib/components/table/TuiTr.svelte";
-    import { TableRowColor } from "../../lib/enums";
+  import TuiTBody from "../../lib/components/table/TuiTBody.svelte";
+  import TuiTHead from "../../lib/components/table/TuiTHead.svelte";
+  import TuiTable from "../../lib/components/table/TuiTable.svelte";
+  import TuiTd from "../../lib/components/table/TuiTd.svelte";
+  import TuiTh from "../../lib/components/table/TuiTh.svelte";
+  import TuiTr from "../../lib/components/table/TuiTr.svelte";
+  import { TableRowColor } from "../../lib/enums";
 
 </script>
 

@@ -1,9 +1,10 @@
 <script lang="ts">
   import TuiPanel from "../lib/components/TuiPanel.svelte";
-import TuiScreen from "../lib/components/TuiScreen.svelte";
-import TuiTabs from "../lib/composites/TuiTabs.svelte";
+  import TuiScreen from "../lib/components/TuiScreen.svelte";
+  import TuiTabs from "../lib/composites/TuiTabs.svelte";
   import Tab1 from "./tabs/Tab1.svelte";
-  import TableTab from "./tabs/TableTab.svelte";
+  import Example from "./Bios/Example.svelte";
+  import Code from "./Bios/Code.svelte";
 
 </script>
 
@@ -14,17 +15,16 @@ import TuiTabs from "../lib/composites/TuiTabs.svelte";
   </TuiPanel>
   <TuiTabs tabs={[
     {
-      tabName: "main",
-      tabTitle: "Main",
-      tabPanel: TableTab
+      tabName: "example",
+      tabTitle: "Example",
+      tabPanel: Example
     },
     {
-      tabName: "exit",
-      tabTitle: "Exit",
-      tabPanel: Tab1
+      tabName: "code",
+      tabTitle: "Code",
+      tabPanel: Code
     }
-  ]
-  }/>
+  ]}/>
   
   <div class="tui-statusbar absolute cyan-168">
     <ul>

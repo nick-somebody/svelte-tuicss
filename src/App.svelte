@@ -18,15 +18,18 @@
   import Navigation from './docs/Navigation.svelte';
   import Table from './docs/Table.svelte'
     import Bios from './docs/Bios.svelte';
+    import TuiPanel from './lib/components/TuiPanel.svelte';
 </script>
 
 <main>
 
   <TuiBackground color={Background.BlueWhite}>
-    <TuiGrid>
+    <TuiPanel fullWidth style="margin:28px 0;">
       <h1 class="center" aria-label="React TUI">
         ===========react-tuicss===========
       </h1>
+    </TuiPanel>
+    <TuiGrid>
       <div class="examples">
 
         <Buttons />
