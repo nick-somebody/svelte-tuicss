@@ -1,0 +1,1 @@
+<tfoot {...$$restProps}><slot /></tfoot>

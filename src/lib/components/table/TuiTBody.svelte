@@ -1,0 +1,1 @@
+<tbody {...$$restProps}><slot /></tbody>

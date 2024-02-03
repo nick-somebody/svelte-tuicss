@@ -1,0 +1,29 @@
+{
+  "name": "svelte-tuicss",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "@testing-library/svelte": "^4.1.0",
+    "@tsconfig/svelte": "^5.0.2",
+    "date-fns": "~3.3.0",
+    "jsdom": "^24.0.0",
+    "svelte": "^4.2.8",
+    "svelte-check": "^3.6.2",
+    "tslib": "^2.6.2",
+    "tuicss": "~2.1.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vitest": "^1.2.2",
+    "vitest-dom": "^0.1.1"
+  }
+}
