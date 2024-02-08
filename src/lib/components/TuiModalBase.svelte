@@ -1,13 +1,12 @@
 <script lang="ts">
   import { Color, MildColor } from "../enums";
   import TuiButton from "./TuiButton.svelte";
-  import TuiFieldset from "./TuiFieldset.svelte";
   import TuiLegend from "./TuiLegend.svelte";
   export let modalTitle: string;
   let dialog: HTMLDialogElement;
 
   export let showModal: boolean = false;
-  $: if (showModal) { dialog?.showModal(); console.log("asdasdasd ", showModal) };
+  $: if (showModal) { dialog?.showModal(); };
 </script>
 
 <dialog

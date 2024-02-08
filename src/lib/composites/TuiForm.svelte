@@ -13,7 +13,7 @@
       { heading }
     </TuiLegend>
     {#if description}
-      <div class="tui-inputset-description">
+      <div data-testid="tui-inputset-description" class="tui-inputset-description">
         { description }
       </div>
     {/if}

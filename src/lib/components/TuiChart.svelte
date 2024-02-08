@@ -28,7 +28,6 @@
     class:tui-chart-display={true}
     class:no-x-axis={!hasLabels}
     class:no-y-axis={!hasLabels}
-    role="presentation"
   >
     {#each values as { value, label }, idx (`value-shape-${idx}`) }
       <div
@@ -49,25 +48,25 @@
     {/each}
   </div>
   {#if hasLabels}
-    <div class:tui-chart-y-axis={true} class:tui-chart-vertical-axis={!horizontal}>
+    <div data-testid="chart-y-axis" class:tui-chart-y-axis={true} class:tui-chart-vertical-axis={!horizontal}>
       {#if horizontal}
         {#each values as {label}, idx (idx)}
-          <div class="tui-chart-legend">{ label}</div>
+          <div data-testid="chart-y-axis-value-legend" class="tui-chart-legend">{ label }</div>
         {/each}
       {:else}
         {#each labels as label, idx (idx)}
-          <div class="tui-chart-legend">{ label }</div>
+          <div data-testid="chart-y-axis-label-legend"  class="tui-chart-legend">{ label }</div>
         {/each}
       {/if}
     </div>
-    <div class="tui-chart-x-axis">
+    <div data-testid="chart-x-axis" class="tui-chart-x-axis">
       {#if horizontal}
         {#each labels as label, idx (idx)}
-          <div class="tui-chart-legend">{ label }</div>
+          <div data-testid="chart-y-axis-label-legend"  class="tui-chart-legend">{ label }</div>
         {/each}
       {:else}
         {#each values as {label}, idx (idx)}
-          <div class="tui-chart-legend">{ label }</div>
+          <div data-testid="chart-y-axis-value-legend"  class="tui-chart-legend">{ label }</div>
         {/each}
       {/if}
     </div>

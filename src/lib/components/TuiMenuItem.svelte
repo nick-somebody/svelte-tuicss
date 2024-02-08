@@ -13,7 +13,7 @@
     <a {href}><slot /></a>
   {/if}
   {#if type === "text"}
-    <div><slot /></div>
+    <div data-testid="menuitem-text"><slot /></div>
   {/if}
 </li>
 

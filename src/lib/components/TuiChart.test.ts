@@ -55,3 +55,39 @@ test("render  bar aria-valuetext value with default valueFormatter", () => {
   const bar = screen.getByRole("meter")
   expect(bar.getAttribute("aria-valuetext")).toEqual(`${value.value}%`)
 })
+
+test("render bar aria-valuemin with default 0", () => {
+  render(TuiChart, { ...props, values: [value] })
+
+  const bar = screen.getByRole("meter")
+  expect(bar.getAttribute("aria-valuemin")).toEqual("0")
+})
+test("render bar aria-valuemin with minValue", () => {
+  render(TuiChart, { ...props, minValue, values: [value] })
+
+  const bar = screen.getByRole("meter")
+  expect(bar.getAttribute("aria-valuemin")).toEqual(`${minValue}`)
+})
+
+test("render bar aria-valuemax with default 0", () => {
+  render(TuiChart, { ...props, values: [value] })
+
+  const bar = screen.getByRole("meter")
+  expect(bar.getAttribute("aria-valuemax")).toEqual("100")
+})
+
+test("render bar aria-valuemax with maxValue", () => {
+  render(TuiChart, { ...props, maxValue, values: [value] })
+
+  const bar = screen.getByRole("meter")
+  expect(bar.getAttribute("aria-valuemax")).toEqual(`${maxValue}`)
+})
+
+test("render chart with labels", () => {
+  render(TuiChart, { ...props, values: [value], labels: ["test"] })
+
+  const xAxis = screen.getAllByTestId("chart-x-axis");
+  const yAxis = screen.getAllByTestId("chart-y-axis");
+  expect(xAxis.length).greaterThanOrEqual(1)
+  expect(yAxis.length).greaterThanOrEqual(1)
+})

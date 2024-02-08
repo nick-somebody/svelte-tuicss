@@ -1,6 +1,12 @@
+<script lang="ts">
+  export let disabled: boolean = false;
+</script>
+
 <fieldset
   { ...$$restProps }
   class:tui-fieldset={true}
-  class:disabled={ $$restProps.disabled }>
+  class:disabled
+  {disabled}
+>
   <slot></slot>
 </fieldset>

@@ -6,5 +6,15 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
+    coverage: {
+      exclude: [
+        "vite.*",
+        "svelte.config.js",
+        "src/docs",
+        "src/App.svelte",
+        "src/main.ts",
+        "src/vite-env.d.ts"
+      ]
+    }
   },
 })

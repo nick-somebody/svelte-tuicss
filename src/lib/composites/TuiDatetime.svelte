@@ -12,7 +12,7 @@
 </script>
 
 
-<span class="tui-datetime">{date}</span>
+<span data-testid="tui-datetime" class="tui-datetime">{date}</span>
 
 <style>
 span.tui-datetime {

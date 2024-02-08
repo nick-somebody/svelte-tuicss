@@ -21,7 +21,7 @@
 <TuiFieldset { ...$$restProps}>
   <TuiLegend>{ heading}</TuiLegend>
   {#if description}
-    <div class="tui-checkbox-description">{ description }</div>
+    <div data-testid="tui-checkbox-description" class="tui-checkbox-description">{ description }</div>
   {/if}
   {#each options as {label, disabled, value}, idx (idx)}
     <label { ...$$restProps } class:tui-checkbox={true} class:disabled>

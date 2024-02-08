@@ -1,5 +1,8 @@
 <script lang="ts">
-  let withSpace: boolean = true;
+  export let withSpace: boolean = true;
 </script>
-
-<svelte:element this={ withSpace ? 'hr' : 'div' } class="tui-divider" { ...$$restProps }></svelte:element>
+{#if withSpace}
+<hr class="tui-divider" { ...$$restProps } />
+{:else}
+<div class="tui-divider" { ...$$restProps } role="separator"></div>
+{/if}

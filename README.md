@@ -2,8 +2,6 @@
 
 This is currently experimental.
 
-I am just tinkering with svelte.
-
 TODO:
 
 - Event handling

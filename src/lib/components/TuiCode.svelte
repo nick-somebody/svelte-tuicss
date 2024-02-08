@@ -8,8 +8,16 @@
 
   const getClasses = (classList: string, dark?: boolean) => {
     const classes = classList.split(" ");
-    classes.push(color ?? dark ? MildColor.Black : MildColor.White );
-    classes.push(`${textColor ?? dark ? MildColor.Cyan : MildColor.Black}-text`);
+    if (color) {
+      classes.push(color);
+    } else {
+      classes.push(dark ? MildColor.Black : MildColor.White);
+    }
+    if (textColor) {
+      classes.push(`${textColor}-text`);
+    } else {
+      classes.push(`${dark ? MildColor.Cyan : MildColor.Black}-text`);
+    }
     return classes.join(" ");
   }
 
