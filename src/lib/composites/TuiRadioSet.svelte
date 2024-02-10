@@ -22,7 +22,7 @@
 <TuiFieldset { ...$$restProps}>
   <TuiLegend>{ heading}</TuiLegend>
   {#if description}
-    <div class="tui-radio-description">{ description }</div>
+    <div data-testid="tui-radio-description" class="tui-radio-description">{ description }</div>
   {/if}
   {#each options as opt, idx (idx)}
     <TuiRadio
