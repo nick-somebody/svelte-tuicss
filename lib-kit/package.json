@@ -13,10 +13,24 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write ."
   },
+  "description": "Svelte component library for the Tuicss UI framework.",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "tuicss",
+    "library"
+  ],
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nick-somebody/svelte-tuicss",
+    "directory": "lib-kit"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "svelte": "./dist/index.js"
+      "svelte": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "files": [
@@ -52,6 +66,7 @@
     "vite": "^5.0.11",
     "vitest": "^1.2.0"
   },
+  "module": "./dist/index.js",
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module"
