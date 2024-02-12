@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"path": "docs-kit"
+		},
+		{
+			"path": "lib-kit"
+		},
+		{
+			"path": "."
+		}
+	],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "eslint.enable": false,
+    "eslint.run": "onType",
+    "[typescript]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[svelte]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "svelte.svelte-vscode",
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "svelte.svelte-vscode",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+<optgroup {...$$restProps}><slot /></optgroup>

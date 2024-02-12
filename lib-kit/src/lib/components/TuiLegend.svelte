@@ -1,0 +1,3 @@
+<legend {...$$restProps}>
+  <slot />
+</legend>
