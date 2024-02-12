@@ -6,7 +6,6 @@ on:
 
 jobs:
   build_site:
-    working_directory: ../docs-kit
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
