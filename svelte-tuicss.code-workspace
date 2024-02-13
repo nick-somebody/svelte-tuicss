@@ -11,7 +11,7 @@
 		}
 	],
   "settings": {
-    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.tsdk": "svelte-tuicss/node_modules/typescript/lib",
     "eslint.enable": false,
     "eslint.run": "onType",
     "[typescript]": {
