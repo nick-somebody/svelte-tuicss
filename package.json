@@ -3,5 +3,28 @@
   "workspaces": [
     "docs-kit",
     "lib-kit"
-  ]
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "husky": "^9.0.11"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        2,
+        "never",
+        [
+          "start-case",
+          "pascal-case"
+        ]
+      ]
+    }
+  },
+  "scripts": {
+    "prepare": "husky"
+  }
 }
