@@ -1,7 +1,10 @@
 name: Publish Package to npmjs
+
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -17,6 +20,7 @@ jobs:
         run: npm run build
       - name: publish lib
         working-directory: ./lib-kit
-        run: npm publish
+        run: npx semantic-release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
