@@ -28,7 +28,6 @@
     "format": "prettier --write ."
   },
   "main": "./dist/index.js",
-  "default": "./dist/index.js",
   "module": "./dist/index.js",
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
