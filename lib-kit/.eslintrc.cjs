@@ -27,7 +27,8 @@ module.exports = {
         parser: '@typescript-eslint/parser'
       },
       rules: {
-        'svelte/no-unused-svelte-ignore': 'off'
+        'svelte/no-unused-svelte-ignore': 'off',
+        'svelte/valid-compile': 'off'
       }
     }
   ]
