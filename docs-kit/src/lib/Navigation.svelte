@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import {
     Position,
     TuiCode,
@@ -15,34 +16,34 @@
 <TuiScreen res="800" bordered class="tui-bg-blue-black">
   <TuiNavbar position={Position.Relative}>
     <TuiSidenav position={Position.Relative}>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         <span class="red-168-text">O</span>pen
         <span class="tui-shortcut">ctrl+o</span>
       </TuiMenuItem>
-      <TuiMenuItem href="/">OS Shell</TuiMenuItem>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>OS Shell</TuiMenuItem>
+      <TuiMenuItem href={base}>
         <span class="red-168-text">C</span>opy
         <span class="tui-shortcut">ctrl+c</span>
       </TuiMenuItem>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         <span class="red-168-text">P</span>aste
         <span class="tui-shortcut">ctrl+v</span>
       </TuiMenuItem>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         Cut
         <span class="tui-shortcut">ctrl+x</span>
       </TuiMenuItem>
       <div class="tui-black-divider"></div>
-      <TuiMenuItem href="/">Insert</TuiMenuItem>
-      <TuiMenuItem href="/">Delete</TuiMenuItem>
-      <TuiMenuItem href="/">Go...</TuiMenuItem>
+      <TuiMenuItem href={base}>Insert</TuiMenuItem>
+      <TuiMenuItem href={base}>Delete</TuiMenuItem>
+      <TuiMenuItem href={base}>Go...</TuiMenuItem>
       <div class="tui-black-divider"></div>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         <span class="red-168-text">S</span>earch
         <span class="tui-shortcut">ctrl+p</span>
       </TuiMenuItem>
       <div class="tui-black-divider"></div>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         Exit <span class="tui-shortcut">F10</span>
       </TuiMenuItem>
     </TuiSidenav>
@@ -51,18 +52,18 @@
       <TuiMenuItem on:click={() => {}}>
         <span class="red-168-text">N</span>ew
       </TuiMenuItem>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         <span class="red-168-text">O</span>pen...
         <span class="tui-shortcut">F3</span>
       </TuiMenuItem>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         <span class="red-168-text">S</span>ave
         <span class="tui-shortcut">F2</span>
       </TuiMenuItem>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         S<span class="red-168-text">a</span>ve as...
       </TuiMenuItem>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         Save a<span class="red-168-text">l</span>l
       </TuiMenuItem>
       <div class="tui-black-divider"></div>
@@ -72,19 +73,19 @@
           <span class="right">►</span>
           <span class="red-168-text">M</span>ore
         </div>
-        <TuiMenuItem href="/">
+        <TuiMenuItem href={base}>
           <span class="red-168-text">C</span>hange dir...
         </TuiMenuItem>
-        <TuiMenuItem href="/">
+        <TuiMenuItem href={base}>
           <span class="red-168-text">P</span>rint
         </TuiMenuItem>
-        <TuiMenuItem href="/">
+        <TuiMenuItem href={base}>
           <span class="red-168-text">D</span>OS shell
         </TuiMenuItem>
       </TuiDropdown>
 
       <div class="tui-black-divider"></div>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         <span class="red-168-text">Q</span>uit
         <span class="tui-shortcut">F10</span>
       </TuiMenuItem>
@@ -96,42 +97,42 @@
     dark
     code={`<TuiNavbar>
   <TuiSidenav slot="sidenav">
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       <span class="red-168-text">O</span>pen
       <span class="tui-shortcut">ctrl+o</span>
     </TuiMenuItem>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       OS Shell
     </TuiMenuItem>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       <span class="red-168-text">C</span>opy
       <span class="tui-shortcut">ctrl+c</span>
     </TuiMenuItem>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       <span class="red-168-text">P</span>aste
       <span class="tui-shortcut">ctrl+v</span>
     </TuiMenuItem>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       Cut
       <span class="tui-shortcut">ctrl+x</span>
     </TuiMenuItem>
     <div class="tui-black-divider"></div>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       Insert
     </TuiMenuItem>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       Delete
     </TuiMenuItem>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       Go...
     </TuiMenuItem>
     <div class="tui-black-divider"></div>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       <span class="red-168-text">S</span>earch
       <span class="tui-shortcut">ctrl+p</span>
     </TuiMenuItem>
     <div class="tui-black-divider"></div>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       Exit <span class="tui-shortcut">F10</span>
     </TuiMenuItem>
   </TuiSidenav>
@@ -140,18 +141,18 @@
     <TuiMenuItem on:click={ () => {}}>
       <span class="red-168-text">N</span>ew
     </TuiMenuItem>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       <span class="red-168-text">O</span>pen...
       <span class="tui-shortcut">F3</span>
     </TuiMenuItem>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       <span class="red-168-text">S</span>ave
       <span class="tui-shortcut">F2</span>
     </TuiMenuItem>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       S<span class="red-168-text">a</span>ve as...
     </TuiMenuItem>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       Save a<span class="red-168-text">l</span>l
     </TuiMenuItem>
     <div class="tui-black-divider"></div>
@@ -161,19 +162,19 @@
         <span class="right">►</span>
         <span class="red-168-text">M</span>ore
       </div>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         <span class="red-168-text">C</span>hange dir...
       </TuiMenuItem>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         <span class="red-168-text">P</span>rint
       </TuiMenuItem>
-      <TuiMenuItem href="/">
+      <TuiMenuItem href={base}>
         <span class="red-168-text">D</span>OS shell
       </TuiMenuItem>
     </TuiDropdown>
 
     <div class="tui-black-divider"></div>
-    <TuiMenuItem href="/">
+    <TuiMenuItem href={base}>
       <span class="red-168-text">Q</span>uit
       <span class="tui-shortcut">F10</span>
     </TuiMenuItem>
