@@ -15,6 +15,9 @@
     "url": "https://github.com/nick-somebody/svelte-tuicss",
     "directory": "lib-kit"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
@@ -48,7 +51,10 @@
     "svelte": "^4.0.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.2",
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/package": "^2.0.0",
