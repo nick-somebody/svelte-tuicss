@@ -1,7 +1,7 @@
 import 'tuicss';
 import './style.css';
 
-export * from './enums';
-export * from './helpers';
-export * from './components';
-export * from './composites';
+export * from './enums.js';
+export * from './helpers.js';
+export * from './components/index.js';
+export * from './composites/index.js';

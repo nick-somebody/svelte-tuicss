@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Color, MildColor } from '../enums';
+  import { Color, MildColor } from '$lib/enums.js';
   export let color: Color | MildColor | undefined = undefined;
   export let textColor: Color | MildColor | undefined = undefined;
   export let light: boolean | undefined = undefined;

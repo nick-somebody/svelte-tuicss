@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { TableRowColor } from '../../enums';
+  import type { TableRowColor } from '../$lib/enums.js';
 
   export let hoverColor: TableRowColor | undefined = undefined;
   export let stripeColor: TableRowColor | undefined = undefined;

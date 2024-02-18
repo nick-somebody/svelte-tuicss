@@ -23,4 +23,4 @@ export { default as TuiSelect } from './TuiSelect.svelte';
 export { default as TuiTextarea } from './TuiTextarea.svelte';
 export { default as TuiWindow } from './TuiWindow.svelte';
 
-export * from './table';
+export * from './table/index.js';

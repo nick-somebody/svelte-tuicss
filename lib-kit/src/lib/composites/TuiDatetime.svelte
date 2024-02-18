@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { dateString } from '../helpers';
+  import { dateString } from '$lib/helpers.js';
 
   export let formatString: string;
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Position } from '../enums';
+  import { Position } from '$lib/enums.js';
 
   export let buttonText: string = '';
   export let position: Position = Position.Relative;

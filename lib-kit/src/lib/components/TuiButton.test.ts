@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/svelte';
 import TuiButton from './TuiButton.svelte';
 import { expect, test } from 'vitest';
-import { MildColor } from '../enums';
+import { MildColor } from '$lib/enums.js';
 
 test('render button', () => {
   render(TuiButton);
