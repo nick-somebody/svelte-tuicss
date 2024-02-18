@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/svelte';
 import TuiCode from './TuiCode.svelte';
 import { expect, test } from 'vitest';
-import { Color, MildColor } from '../enums';
+import { Color, MildColor } from '$lib/enums.js';
 
 test('ensure defaults are added to class', () => {
   render(TuiCode, {

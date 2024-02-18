@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Color, MildColor } from '../enums';
+  import { Color, MildColor } from '$lib/enums.js';
   import TuiButton from './TuiButton.svelte';
   import TuiLegend from './TuiLegend.svelte';
   export let modalTitle: string;

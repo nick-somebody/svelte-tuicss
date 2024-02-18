@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Color, DarkBackground, LightBackground, MildColor } from '../enums';
+  import type { Color, DarkBackground, LightBackground, MildColor } from '$lib/enums.js';
 
   export let indeterminate: boolean = false;
   export let label: string = '';

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { ChartColor } from '../enums';
-  import { defaultScaler, type ValueFunction } from '../helpers';
+  import { ChartColor } from '$lib/enums.js';
+  import { defaultScaler, type ValueFunction } from '$lib/helpers.js';
 
   export let size: { width: string; height: string };
   export let values: { label: string; value: number }[];

@@ -27,7 +27,9 @@ module.exports = {
         parser: '@typescript-eslint/parser'
       },
       rules: {
+        // this seems to give a false positive
         'svelte/no-unused-svelte-ignore': 'off',
+        // the PR check has a build step, this is superfluous
         'svelte/valid-compile': 'off'
       }
     }
