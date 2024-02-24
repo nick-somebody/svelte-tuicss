@@ -1,19 +1,25 @@
 {
-	"folders": [
-		{
-			"path": "docs-kit"
-		},
-		{
-			"path": "lib-kit"
-		},
-		{
-			"path": "."
-		}
-	],
+  "folders": [
+    {
+      "name": "docs",
+      "path": "docs-kit"
+    },
+    {
+      "name": "lib",
+      "path": "lib-kit"
+    },
+    {
+      "name": "root",
+      "path": "."
+    }
+  ],
   "settings": {
     "typescript.tsdk": "svelte-tuicss/node_modules/typescript/lib",
     "eslint.enable": false,
     "eslint.run": "onType",
+    "vitest.enable": true,
+    "vitest.disabledWorkspaceFolders": ["docs", "root"],
+    "vitest.commandLine": "npx vitest",
     "[typescript]": {
       "editor.formatOnSave": true,
       "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -23,11 +29,30 @@
       "editor.defaultFormatter": "svelte.svelte-vscode",
     }
   },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug Current Test File",
+        "autoAttachChildProcesses": true,
+        "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+        "program": "${workspaceRoot:root}/node_modules/vitest/vitest.mjs",
+        "cwd": "${fileWorkspaceFolder}",
+        "args": ["run", "${file}"],
+        "smartStep": true,
+        "console": "integratedTerminal"
+      }
+    ],
+    "compounds": []
+  },
   "extensions": {
     "recommendations": [
       "svelte.svelte-vscode",
       "dbaeumer.vscode-eslint",
-      "esbenp.prettier-vscode"
+      "esbenp.prettier-vscode",
+      "vitest.explorer"
     ]
   }
 }

@@ -6,6 +6,17 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: ['./vitest-setup.js'],
-    include: ['src/**/*.{test,spec}.{js,ts}']
+    include: ['src/**/*.{test,spec}.{js,ts}'],
+    coverage: {
+      exclude: [
+        '.svelte-kit',
+        'dist',
+        'svelte.config.js',
+        '.eslintrc.cjs',
+        '**/*.d.ts',
+        'src/routes'
+      ],
+      provider: 'v8'
+    }
   }
 });

@@ -1,58 +1,73 @@
-# create-svelte
+# svelte-tuicss
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is currently experimental.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+Alternative to [react-tuicss](https://github.com/nick-somebody/react-tuicss)
 
-## Creating a project
+This library is a component library built on [TuiCss](https://github.com/vinibiavatti1/TuiCss).
 
-If you're seeing this, you've probably already done this step. Congrats!
+I built this as a way to learn svelte.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Installing
 
-# create a new project in my-app
-npm create svelte@latest my-app
+```sh
+npm i svelte-tuicss
 ```
+
+Then add code like this to your `.svelte` file
+
+```svelte
+import { TuiPanel, TuiScreen, TuiTabs } from "svelte-tuicss";
+```
+I will eventually write better docs, but you can get plenty of examples from the [docs site](https://nick-somebody.github.io/react-tuicss/) and the [docs code](../docs-kit/).
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To develop normally, you probably want to use the docs site as a test bed for what you're doing.
 
-```bash
-npm run dev
+To test that your stuff compiles, there are multiple commands for doing that, including...
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
+```sh
+npm run check
+npm run check:watch
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Run the format and lint commands before committing/pushing to prevent unneeded CI fails.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
+```sh
+npm run format
+npm run lint
 ```
+
+Tests can be run with
+
+```sh
+# for normal test running
+npm run test
+
+# for coverage
+npm run coverage
+```
+
+Tests can be debugged in `vscode` by hitting `F5` on the test file you wish to debug.
+
+> [!NOTE]
+> The workspace file at the root folder of this repo should be opened in vscode as it has the configuration for this.
+
+
+## Releasing
+
+- Get changes into `main`
+- Pull latest code to local
+- Create a branch on your local
+- Run `npm run tag-release` (this will analyse commits, generate a changelog entry, bump npm and create a corresponding git tag).
+  - advise configuring git to follow tags on push, eg. `git config --global push.followTags true`
+  - You need to push the branch commits and tag to the remote
+- Get this release PR merged to `main`
+- [Create a new release](https://github.com/nick-somebody/svelte-tuicss/releases/new) against the tag you just created.
+- When the release is published, [the workflow](../.github/workflows/publish.yml) will handle the rest
+
+## Changelog
+
+See [here](CHANGELOG.md)
