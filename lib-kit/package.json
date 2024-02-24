@@ -28,7 +28,8 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test": "vitest",
     "lint": "prettier --check . && eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "tag-release": "commit-and-tag-version"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -51,10 +52,6 @@
     "svelte": "^4.0.0"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/commit-analyzer": "^11.1.0",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^11.0.2",
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/package": "^2.0.0",
@@ -63,6 +60,7 @@
     "@types/eslint": "8.56.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "commit-and-tag-version": "^12.2.0",
     "date-fns": "^3.3.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
