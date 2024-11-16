@@ -21,4 +21,4 @@ This repo uses husky and enforces [conventional-commits](https://www.conventiona
 If you are commiting changes to code at:
 
 - `docs-kit` please ensure you only use the `docs` commit type, the code in this path is only for the docs site and is deployed after each merge
-- only use `fix` `feat` or `BREAKING CHANGE` commit types if you have made tangible change in `lib-kit`, that is, a documentation change that needs publishing to `npm` or a change to the lib itself.
+- only use `fix` `feat` or `BREAKING CHANGE` commit types if you have made tangible change in `lib-kit`, that may also include, a documentation change that needs publishing to `npm` and/or a change to the lib itself.
