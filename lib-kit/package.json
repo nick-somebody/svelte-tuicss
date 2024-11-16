@@ -1,6 +1,6 @@
 {
   "name": "svelte-tuicss",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "description": "Svelte component library for the Tuicss UI framework.",
   "keywords": [
